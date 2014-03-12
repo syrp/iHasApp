@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Daniel Amitay. All rights reserved.
 //
 
-#import "iHasApp.h"
+#import "TL_iHasApp.h"
 
-@implementation iHasApp
+@implementation TL_iHasApp
 
 @synthesize country = _country;
 
@@ -161,7 +161,7 @@
     dispatch_queue_t retrieval_thread = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(retrieval_thread, ^{
         NSBundle *selfBundle = [NSBundle bundleForClass:[self class]];
-        NSString *appSchemesDictionaryPath = [selfBundle pathForResource:@"schemeApps" ofType:@"json"];
+        NSString *appSchemesDictionaryPath = [selfBundle pathForResource:@"tl_schemeApps" ofType:@"json"];
         if (!appSchemesDictionaryPath && failureBlock) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 failureBlock(nil);

@@ -15,7 +15,7 @@
  *Requirements:* iOS base SDK 5.0+, Internet connectivity for app dictionary retrieval
   
  */
-@interface iHasApp : NSObject
+@interface TL_iHasApp : NSObject
 
 /**---------------------------------------------------------------------------------------
  * @name Properties
